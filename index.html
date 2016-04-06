@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Enciendete</title>
+    <link rel="stylesheet" media="not screen and (device-width: 1200px) and (device-height: 900px)"
+        href="lib/sugar-web/graphics/css/sugar-96dpi.css">
+    <link rel="stylesheet" media="screen and (device-width: 1200px) and (device-height: 900px)"
+        href="lib/sugar-web/graphics/css/sugar-200dpi.css">
+    <link rel="stylesheet" href="css/simplegrid.css">
+    <link rel="stylesheet" href="css/activity.css">
+    <script data-main="js/loader" src="lib/require.js"></script>
+  </head>
+
+  <body>
+    <div id="main-toolbar" class="toolbar">
+      <button class="toolbutton" id="activity-button" title="Enciendete"></button>
+      <!-- Buttons with class="pull-right" will be right aligned -->
+      <button class="toolbutton pull-right" id="stop-button" title="Stop"></button>
+    </div>
+
+    <!-- The content of your activity goes inside the canvas -->
+    <div id="canvas">
+
+      <!-- Init Elements -->
+        <div id="menu" class="grid">
+            <div class="col-1-2" id="menu-1">
+                <button class="menu-button" value="1">Memoriza secuencia</button>
+            </div>
+            <div class="col-1-2" id="menu-2">
+                <button class="menu-button" value="2">Completa secuencia</button>
+            </div>
+        </div>
+        <div id="level-1" class="hidden">
+            <div class="text">
+                Observa con atención y memoriza la mayor cantidad de números posibles
+                <br>
+                para completar la secuencia numérica.
+            </div>
+            <div class="score-area">
+                <p id="score"></p>
+            </div>
+            <div class="text-area">
+                <button class="start" title="Empezar">Iniciar</button>
+                <button class="reload reload-button" title="Volver">Volver a menu</button>
+            </div>
+            <div class="msg">
+                <h1 class="hidden good">Muy bien, continúa</h1>
+                <h1 class="hidden bad">Has fallado, vuelve a intertarlo</h1>
+            </div>
+            <div class="hidden win">
+                <h1>Felicidades, has ganado</h1>
+                <button class="reload-button">Volver a menu</button>
+                <button class="play-again">Jugar de nuevo</button>
+            </div>
+            <div class="element" style="top: 35%; left: 30%;">
+                <button id="bn1" class="button-number" value="1">1</button>
+            </div>
+            <div class="element" style="top: 30%; left: 45%;">
+                <button id="bn2" class="button-number" value="2">2</button>
+            </div>
+            <div class="element" style="top: 35%; left: 60%;">
+                <button id="bn3" class="button-number" value="3">3</button>
+            </div>
+            <div class="element" style="top: 50%; left: 25%;">
+                <button id="bn4" class="button-number" value="4">4</button>
+            </div>
+            <div class="element" style="top: 50%; left: 45%;">
+                <button id="bn5" class="button-number" value="5">5</button>
+            </div>
+            <div class="element" style="top: 50%; left: 65%;">
+                <button id="bn6" class="button-number" value="6">6</button>
+            </div>
+            <div class="element" style="top: 65%; left: 30%;">
+                <button id="bn7" class="button-number" value="7">7</button>
+            </div>
+            <div class="element" style="top: 65%; left: 60%;">
+                <button id="bn8" class="button-number" value="8">8</button>
+            </div>
+            <div class="element" style="top: 75%; left: 40%;">
+                <button id="bn9" class="button-number" value="9">9</button>
+            </div>
+            <div class="element" style="top: 75%; left: 50%;">
+                <button id="bn0" class="button-number" value="0">0</button>
+            </div>
+        </div>
+        <div id="level-2" class="hidden">
+            <div class="text">
+                ¿Cuál es el número que falta para completar la Secuencia?
+                <div id="serie-text"></div>
+            </div>
+            <div class="text2">
+                <p><button id="check">Comprobar</button></p>
+            </div>
+            <div class="text-area">
+                <button class="reload reload-button" title="Volver">Volver a menu</button>
+            </div>
+            <div class="msg">
+                <h1 class="hidden good">Muy bien, continúa</h1>
+                <h1 class="hidden bad">Has fallado, vuelve a intertarlo</h1>
+            </div>
+            <div class="hidden win">
+                <h1>Felicidades, has ganado</h1>
+                <button class="reload-button">Volver a menu</button>
+                <button class="serie-again">Jugar de nuevo</button>
+            </div>
+            <div class="element" style="top: 50%; left: 15%;">
+                <button class="button-serie" value="0"></button>
+                <input class="hidden" type="text">
+            </div>
+            <div class="element" style="top: 40%; left: 25%;">
+                <button class="button-serie" value="1"></button>
+                <input class="hidden" type="text">
+            </div>
+            <div class="element" style="top: 30%; left: 35%;">
+                <button class="button-serie" value="2"></button>
+                <input class="hidden" type="text">
+            </div>
+            <div class="element" style="top: 30%; left: 55%;">
+                <button class="button-serie" value="3"></button>
+                <input class="hidden" type="text">
+            </div>
+            <div class="element" style="top: 40%; left: 65%;">
+                <button class="button-serie" value="4"></button>
+                <input class="hidden" type="text">
+            </div>
+            <div class="element" style="top: 50%; left: 75%;">
+                <button class="button-serie" value="5"></button>
+                <input class="hidden" type="text">
+            </div>
+        </div>
+    </div>
+  </body>
+
+</html>
